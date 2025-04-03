@@ -9,6 +9,7 @@ dependencies = [
     "keyboard>=0.13.5",
     "numpy>=2.2.4",
     "pyaudio>=0.2.14",
+    "pysocks>=1.7.1",
     "python-dotenv>=1.1.0",
     "sounddevice>=0.5.1",
     "soundfile>=0.13.1",

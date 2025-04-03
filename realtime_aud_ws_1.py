@@ -386,8 +386,8 @@ async def send_audio_and_receive_response(wav_file_path: str, output_path: str):
             
             if response["type"] == "response.audio.delta" and "delta" in response:
                 # audio_chunks.append(response["delta"])
-                audio_chunk = base64.b64encode(base64.b64decode(response['delta'])).decode('utf-8')  # Decode each chunk
-                audio_chunks.append(audio_chunk)
+                # audio_chunk = base64.b64encode(base64.b64decode(response['delta'])).decode('utf-8')  # Decode each chunk
+                audio_chunks.append(response['delta'])
                 # audio_bytes.extend(audio_chunk)  # Append to bytearray
 
             elif response["type"] == "response.done":
@@ -397,6 +397,10 @@ async def send_audio_and_receive_response(wav_file_path: str, output_path: str):
         # Decode and save the output audio
         if audio_chunks:
             output_audio_base64 = "".join(audio_chunks)
+            # txt_file_path = "output.txt"
+            # with open(txt_file_path, "wb") as output_file:
+            #     # output_audio_bytes = base64.b64decode(output_audio_base64)
+            #     output_file.write(output_audio_base64)
             
             output_audio_bytes = base64.b64decode(output_audio_base64)
             
@@ -404,7 +408,7 @@ async def send_audio_and_receive_response(wav_file_path: str, output_path: str):
             with wave.open(output_path, "wb") as wav_file:
                 wav_file.setnchannels(1)  # Mono
                 wav_file.setsampwidth(2)  # 16-bit audio
-                wav_file.setframerate(16000)  # Adjust based on your model's settings
+                wav_file.setframerate(24000)  # Adjust based on your model's settings
                 wav_file.writeframes(output_audio_bytes)
 
             # with open(output_path, "wb") as output_file:

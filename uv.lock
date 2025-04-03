@@ -311,6 +311,7 @@ dependencies = [
     { name = "keyboard" },
     { name = "numpy" },
     { name = "pyaudio" },
+    { name = "pysocks" },
     { name = "python-dotenv" },
     { name = "sounddevice" },
     { name = "soundfile" },
@@ -324,6 +325,7 @@ requires-dist = [
     { name = "keyboard", specifier = ">=0.13.5" },
     { name = "numpy", specifier = ">=2.2.4" },
     { name = "pyaudio", specifier = ">=0.2.14" },
+    { name = "pysocks", specifier = ">=1.7.1" },
     { name = "python-dotenv", specifier = ">=1.1.0" },
     { name = "sounddevice", specifier = ">=0.5.1" },
     { name = "soundfile", specifier = ">=0.13.1" },
@@ -2796,6 +2798,15 @@ sdist = { url = "https://files.pythonhosted.org/packages/79/4f/02a6270acf225c2a3
 wheels = [
     { url = "https://files.pythonhosted.org/packages/dc/8b/e880680429fbac494687626c1338758e70b5dfb75883d9cb78f66635f381/pyobjc_framework_WebKit-11.0-cp313-cp313-macosx_10_13_universal2.whl", hash = "sha256:22d09bb22c3c48d9243f300f8264a68ecc0bdfe09d25794ee86ab2239eae7da2", size = 44938 },
     { url = "https://files.pythonhosted.org/packages/ec/8f/f0ba035f682038264b1e05bde8fb538e8fa61267dc3ac22e3c2e3d3001bc/pyobjc_framework_WebKit-11.0-cp313-cp313t-macosx_10_13_universal2.whl", hash = "sha256:6141a416f1eb33ded2c6685931d1b4d5f17c83814f2d17b7e2febff03c6f6bee", size = 45443 },
+]
+
+[[package]]
+name = "pysocks"
+version = "1.7.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/bd/11/293dd436aea955d45fc4e8a35b6ae7270f5b8e00b53cf6c024c83b657a11/PySocks-1.7.1.tar.gz", hash = "sha256:3f8804571ebe159c380ac6de37643bb4685970655d3bba243530d6558b799aa0", size = 284429 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/8d/59/b4572118e098ac8e46e399a1dd0f2d85403ce8bbaad9ec79373ed6badaf9/PySocks-1.7.1-py3-none-any.whl", hash = "sha256:2725bd0a9925919b9b51739eea5f9e2bae91e83288108a9ad338b2e3a4435ee5", size = 16725 },
 ]
 
 [[package]]
